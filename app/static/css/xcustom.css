@@ -1,0 +1,75 @@
+
+.style {
+top:0;
+position:absolute;
+height:17.2em;
+padding:0;
+z-index:100;
+
+
+}
+/* The side navigation menu */
+.sidenav {
+
+  top:17.2em;
+  margin: 0;
+  position: fixed; 
+  z-index: 1;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  height: 100%;
+  overflow: auto;
+
+}
+
+/* Sidebar links */
+.sidenav a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidenav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidenav a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+.main {
+
+  
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+  position: relative;
+  
+  
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidenav {
+    width: 100%;
+   height: auto; 
+    position: relative;
+  }
+  .sidenav a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidenav a {
+    text-align: center;
+    float: none;
+  }
+}
